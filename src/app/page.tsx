@@ -14,7 +14,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold">Welcome to the app</h1>
         <p className="text-xl">Sign in to continue</p>
         <div color="red" className="flex flex-1">
-          // draw 100w x 100h red box
+          {/* draw 100w x 100h red box*/}
           <div className="w-100 h-100 bg-red-500"></div>
         </div>
         <button onClick={handleSignIn}>
