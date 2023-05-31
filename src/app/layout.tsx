@@ -1,7 +1,11 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { EB_Garamond } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const eb_garamond = EB_Garamond({
+  weight: ["400", "700"],
+  subsets: ['latin'],
+  variable: '--font-eb-garamond',
+})
 
 export const metadata = {
   title: 'Namsrai Khatanbaatar',
@@ -14,8 +18,25 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="eng">
+
+      <body className={`${eb_garamond.className}`}>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">about</a>
+            </li>
+          </ul>
+        </nav>
+        {children}
+        <footer>
+          <p>footer</p>
+        </footer>
+      </body>
+
     </html>
   )
 }

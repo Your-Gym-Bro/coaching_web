@@ -1,3 +1,5 @@
+
+
 /*
   This example requires some changes to your config:
   
@@ -12,7 +14,7 @@
   }
   ```
 */
-export default function Login() {
+export default function Auth() {
     return (
         <>
             {/*
