@@ -1,6 +1,6 @@
 import './globals.css'
 import { EB_Garamond } from 'next/font/google'
-
+import { AuthContextProvider } from '../context/AuthContext'
 const eb_garamond = EB_Garamond({
   weight: ["400", "700"],
   subsets: ['latin'],
@@ -21,20 +21,9 @@ export default function RootLayout({
     <html lang="eng">
 
       <body className={`${eb_garamond.className}`}>
-        <nav>
-          <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about">about</a>
-            </li>
-          </ul>
-        </nav>
-        {children}
-        <footer>
-          <p>footer</p>
-        </footer>
+        <AuthContextProvider>
+          {children}
+        </AuthContextProvider>
       </body>
 
     </html>
