@@ -1,6 +1,8 @@
+import { error } from "console";
 
 
 export default function Home() {
+
   return (
     <main >
       <div>
